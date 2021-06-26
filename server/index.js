@@ -11,37 +11,36 @@ app.use(express.urlencoded({
 app.use(express.json());
 app.use(compression());
 
-
 app.use(express.static(__dirname + '/../client/dist'));
 
 /* -------- PRODUCT OVERVIEW FETCHING -------- */
-app.get('/overview', function (req, res) {
-  let productId = req.query.productId;
-  axios.all([
-    axios.get(`https://app-hrsei-api.herokuapp.com/api/fec2/hr-sjo/products/${productId}`, {
-      headers: {
-        Authorization: APIToken.TOKEN
-      }
-    }),
-    axios.get(`https://app-hrsei-api.herokuapp.com/api/fec2/hr-sjo/products/${productId}/styles`, {
-      headers: {
-        Authorization: APIToken.TOKEN
-      }
-    })
-  ])
-    .then(axios.spread((detail, styles) => {
-      var product = {
-        overview: detail.data,
-        styles: styles.data
-      };
-      var stringedProduct = JSON.stringify(product);
-      res.status(200).send(stringedProduct);
-    }))
-    .catch((err) => {
-      console.log('get overview error:' + err);
-      res.send(404);
-    });
-});
+// app.get('/overview', function (req, res) {
+//   let productId = req.query.productId;
+//   axios.all([
+//     axios.get(`https://app-hrsei-api.herokuapp.com/api/fec2/hr-sjo/products/${productId}`, {
+//       headers: {
+//         Authorization: APIToken.TOKEN
+//       }
+//     }),
+//     axios.get(`https://app-hrsei-api.herokuapp.com/api/fec2/hr-sjo/products/${productId}/styles`, {
+//       headers: {
+//         Authorization: APIToken.TOKEN
+//       }
+//     })
+//   ])
+//     .then(axios.spread((detail, styles) => {
+//       var product = {
+//         overview: detail.data,
+//         styles: styles.data
+//       };
+//       var stringedProduct = JSON.stringify(product);
+//       res.status(200).send(stringedProduct);
+//     }))
+//     .catch((err) => {
+//       console.log('get overview error:' + err);
+//       res.send(404);
+//     });
+// });
 
 /* -------- ADD TO CART POST REQUEST -------- */
 app.post('/addToCart', (req, res) => {

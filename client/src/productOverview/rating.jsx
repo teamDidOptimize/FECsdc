@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '../App.jsx';
-import axios from 'axios';
 import StarsRating from 'stars-rating';
 
 const Rating = (props) => {

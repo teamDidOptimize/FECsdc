@@ -7,7 +7,7 @@ const RelatedItemsAndComparison = ({productId, setProductId, overviewProduct, ov
   const [relatedProducts, setRelatedProducts] = useState([]);
   const [outfits, setOutfits] = useState([]);
   const [animate, setAnimate] = useState(false);
-  const [relatedIds, setRelatedIds] = useState([13024, 13025, 13030, 13029]);
+  const [relatedIds, setRelatedIds] = useState([]);
   const [initialLoadDone, setInitialLoadDone] = useState(false);
 
   // get saved outfits on inital render

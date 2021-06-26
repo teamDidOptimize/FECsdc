@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import React, {useState, useEffect, useContext} from 'react';
 import axios from 'axios';
 import Rating from './rating.jsx';
@@ -20,11 +21,12 @@ const OverviewApp = (props) => {
 
 
   useEffect(() => {
-    axios.get('/overview', { params: { productId: props.productId } })
+    axios.get(`http://localhost:3000/products/${props.productId}`)
       .then((response) => {
-        setOverviewProduct(response.data.overview);
-        setAllStyles(response.data.styles.results);
-        setCurrentStyle(response.data.styles.results[0]);
+        console.log(response.data);
+        setOverviewProduct(response.data);
+        setAllStyles(response.data.styles);
+        setCurrentStyle(response.data.styles[0]);
         props.setCurrentProduct(response.data);
       })
       .catch((err) => {

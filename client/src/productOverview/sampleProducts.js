@@ -1,6 +1,6 @@
 const products = [
   {
-      "id": 13023,
+      "id": 1,
       "campus": "hr-sjo",
       "name": "Camo Onesie",
       "slogan": "Blend in to your crowd",
@@ -8,10 +8,14 @@ const products = [
       "category": "Jackets",
       "default_price": "140.00",
       "created_at": "2021-02-22T20:24:51.561Z",
-      "updated_at": "2021-02-22T20:24:51.561Z"
+      "updated_at": "2021-02-22T20:24:51.561Z",
+      'features': [{feature: "Fabric", value: "Canvas"},
+      {feature: "Buttons", value: "Brass"}],
+      'styles': [],
+      'related': []
   },
   {
-      "id": 13024,
+      "id": 2,
       "campus": "hr-sjo",
       "name": "Bright Future Sunglasses",
       "slogan": "You've got to wear shades",
@@ -19,10 +23,13 @@ const products = [
       "category": "Accessories",
       "default_price": "69.00",
       "created_at": "2021-02-22T20:24:51.561Z",
-      "updated_at": "2021-02-22T20:24:51.561Z"
+      "updated_at": "2021-02-22T20:24:51.561Z",
+      'features': [],
+      'styles': [],
+      'related': []
   },
   {
-      "id": 13025,
+      "id": 3,
       "campus": "hr-sjo",
       "name": "Morning Joggers",
       "slogan": "Make yourself a morning person",
@@ -30,10 +37,13 @@ const products = [
       "category": "Pants",
       "default_price": "40.00",
       "created_at": "2021-02-22T20:24:51.561Z",
-      "updated_at": "2021-02-22T20:24:51.561Z"
+      "updated_at": "2021-02-22T20:24:51.561Z",
+      'features': [],
+      'styles': [],
+      'related': []
   },
   {
-      "id": 13026,
+      "id": 4,
       "campus": "hr-sjo",
       "name": "Slacker's Slacks",
       "slogan": "Comfortable for everything, or nothing",
@@ -41,10 +51,13 @@ const products = [
       "category": "Pants",
       "default_price": "65.00",
       "created_at": "2021-02-22T20:24:51.561Z",
-      "updated_at": "2021-02-22T20:24:51.561Z"
+      "updated_at": "2021-02-22T20:24:51.561Z",
+      'features': [],
+      'styles': [],
+      'related': []
   },
   {
-      "id": 13027,
+      "id": 5,
       "campus": "hr-sjo",
       "name": "Heir Force Ones",
       "slogan": "A sneaker dynasty",
@@ -52,7 +65,10 @@ const products = [
       "category": "Kicks",
       "default_price": "99.00",
       "created_at": "2021-02-22T20:24:51.561Z",
-      "updated_at": "2021-02-22T20:24:51.561Z"
+      "updated_at": "2021-02-22T20:24:51.561Z",
+      'features': [],
+      'styles': [],
+      'related': []
   }
 ];
 

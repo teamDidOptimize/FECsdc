@@ -11,7 +11,7 @@ import SectionTracker from './Tracker/SectionTracker.jsx';
 export const ThemeContext = React.createContext();
 
 const App = () => {
-  const [productId, setProductId] = useState(13023);
+  const [productId, setProductId] = useState(1);
   const [reviewCount, setReviewCount] = useState(0);
   const [rating, setRating] = useState(0);
   const [currentProduct, setCurrentProduct] = useState({});
