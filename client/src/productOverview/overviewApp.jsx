@@ -21,12 +21,16 @@ const OverviewApp = (props) => {
 
 
   useEffect(() => {
+    // send this get request to port 3000 (where your SDC service is listening)
     axios.get(`http://localhost:3000/products/${props.productId}`)
       .then((response) => {
-        console.log(response.data);
+        // Sets the product in state for overview components
         setOverviewProduct(response.data);
+        // Sets all styles in state for overview components
         setAllStyles(response.data.styles);
+        // Grab the first style from the styles list
         setCurrentStyle(response.data.styles[0]);
+        // set current product at highest level app for other components to use
         props.setCurrentProduct(response.data);
       })
       .catch((err) => {
